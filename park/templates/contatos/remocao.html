@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<h1 class="mt-3 mb-3">Remoção</h1>
+
+<form method="POST" action="{% url 'remocao' %}">
+   {% csrf_token %}
+  
+  <div class="form-group">
+    <label>Placa</label>
+    <input type="text" name="sobrenome" value="{{request.POST.sobrenome}}" class="form-control">
+  </div>
+ 
+  
+  <button type="submit" class="btn btn-danger">Remover</button>
+</form>
+
+{% endblock %}
